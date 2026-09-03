@@ -74,6 +74,44 @@
     )
     .join("");
 
+  // ---------- 店内メニュー表の画像 ----------
+  const menuImagesWrap = document.getElementById("menuImages");
+  const imgs = d.menuImages || [];
+  if (imgs.length > 0) {
+    menuImagesWrap.hidden = false;
+    document.getElementById("menuImagesGrid").innerHTML = imgs
+      .map(
+        (m) => `
+        <button class="menu-image-item" type="button" data-src="images/${m.file}" data-alt="${m.alt}">
+          <img src="images/${m.file}" alt="${m.alt}" loading="lazy">
+        </button>`
+      )
+      .join("");
+  }
+
+  // ライトボックス（メニュー画像の拡大表示）
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+  }
+  document.querySelectorAll(".menu-image-item").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      lightboxImg.src = btn.dataset.src;
+      lightboxImg.alt = btn.dataset.alt;
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+    });
+  });
+  document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+  });
+
   // 収まりきらないカードにだけ「スクロールで続き」ヒントを付ける
   document.querySelectorAll(".menu-card .menu-items-wrap").forEach((wrap) => {
     if (wrap.scrollHeight > wrap.clientHeight + 4) {

@@ -86,7 +86,13 @@
     <div class="container">
       <h2 class="section-title"><span class="section-en">MENU</span>メニュー</h2>
       <div class="menu-grid" id="menuGrid"></div>
-      <p class="menu-note">※仕入れ状況によりメニュー・価格が変わる場合があります。</p>
+      <p class="menu-note">※価格はすべて税込みです。仕入れ状況によりメニュー・価格が変わる場合があります。</p>
+
+      <div class="menu-images" id="menuImages" hidden>
+        <h3 class="menu-images-title">店内メニュー表</h3>
+        <p class="menu-images-note">タップすると大きく表示されます</p>
+        <div class="menu-images-grid" id="menuImagesGrid"></div>
+      </div>
     </div>
   </section>
 
@@ -145,6 +151,12 @@
   <a href="tel:0475-47-3914" class="fixed-tel" id="fixedTel">📞 電話で予約する</a>
 
   <script src="data/site-data.js"></script>
+  <!-- メニュー画像の拡大表示 -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="閉じる">×</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
