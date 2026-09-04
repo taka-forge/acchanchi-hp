@@ -30,14 +30,18 @@ const SITE_DATA = {
     locality: "茂原市",
     street: "小林3136-4",
     // 形式：曜日（Mo/Tu/We/Th/Fr/Sa/Su） 開店-閉店。定休日の曜日は入れない
-    openingHours: "Mo,Tu,Th,Fr,Sa,Su 17:00-22:00",
+    // 営業時間が曜日で違うときは行を分ける
+    openingHours: [
+      "Mo,Tu,Th 17:00-22:00",
+      "Fr,Sa,Su 17:00-24:00",
+    ],
     priceRange: "¥¥",
   },
 
   // ---------- 営業時間 ----------
   // 行を増やせば曜日ごとに分けられる
   hours: [
-    { label: "営業時間", value: "17:00〜22:00" },
+    { label: "営業時間", value: "月・火・木 17:00〜22:00<br>金・土・日 17:00〜24:00" },
     { label: "定休日", value: "水曜日" },
     { label: "試合開催日", value: "試合に合わせて営業時間変更あり<br>（Instagramで告知）" },
   ],
