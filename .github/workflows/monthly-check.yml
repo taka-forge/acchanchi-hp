@@ -1,0 +1,39 @@
+# 毎月1日の日本代表戦チェック。HP（manual.json）に入っていない代表戦の候補を Slack に送る
+# 正本は非公開の taka_Claude リポジトリ（acchanchi-hp/tools/broadcasts/workflows/）。ここは deploy スクリプトで写したもの。直接直さない
+name: 代表戦の月1チェック
+
+on:
+  schedule:
+    - cron: "7 0 1 * *" # UTC 0:07 = JST 9:07、毎月1日
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: tools/broadcasts
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r tools/broadcasts/requirements.txt
+
+      - name: 代表戦を確認して Slack に送る
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL: ${{ vars.ACCHANCHI_SLACK_CHANNEL }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          if [ -z "$SLACK_BOT_TOKEN" ] || [ -z "$SLACK_CHANNEL" ]; then
+            echo "Slack の設定が無いので、画面に出すだけ"
+            python tools/broadcasts/jfa_check.py --dry-run
+          else
+            python tools/broadcasts/jfa_check.py
+          fi

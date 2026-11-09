@@ -1,0 +1,61 @@
+# 放映予定（data/broadcasts.js）を毎朝作り直して公開する
+# 正本は非公開の taka_Claude リポジトリ（acchanchi-hp/tools/broadcasts/workflows/）。ここは deploy スクリプトで写したもの。直接直さない
+# 失敗の知らせ：Secret SLACK_BOT_TOKEN ／ Variable ACCHANCHI_SLACK_CHANNEL（どちらかが無ければ Slack には送らない。GitHub の失敗メールは届く）
+name: 放映予定の更新
+
+on:
+  schedule:
+    - cron: "23 21 * * *" # UTC 21:23 = JST 6:23（毎時0分は混むので外す）
+  workflow_dispatch:
+
+permissions:
+  contents: write # data/broadcasts.js をコミットする
+  pages: write # Pages の再構築を頼む
+
+concurrency:
+  group: broadcasts
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: tools/broadcasts/requirements.txt
+
+      - run: pip install -r tools/broadcasts/requirements.txt
+
+      # 一部のデータ元が取れない・0件になった日は書き換えずに失敗する（前の日の一覧が残る）
+      # 月曜は変化がなくても作った日時を更新する（コミットが60日ないと GitHub が定期実行を止めるため）
+      - name: 放映予定を作る
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL: ${{ vars.ACCHANCHI_SLACK_CHANNEL }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          args="--site . --strict"
+          if [ -n "$SLACK_BOT_TOKEN" ] && [ -n "$SLACK_CHANNEL" ]; then args="$args --slack-on-fail"; fi
+          if [ "$(TZ=Asia/Tokyo date +%u)" = "1" ]; then args="$args --touch"; fi
+          python tools/broadcasts/build.py $args
+
+      - name: 変わっていれば公開する
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/broadcasts.js && [ -z "$(git ls-files --others -- data/broadcasts.js)" ]; then
+            echo "変化なし"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/broadcasts.js
+          git commit -m "放映予定を更新（自動）"
+          git push
+          # Actions からの push で Pages が動かない場合の保険
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null || echo "Pages の再構築依頼は失敗（push で動いていれば問題なし）"
