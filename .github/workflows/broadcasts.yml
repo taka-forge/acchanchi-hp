@@ -9,8 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write # data/broadcasts.js をコミットする
-  pages: write # Pages の再構築を頼む
+  contents: write # data/broadcasts.js をコミットする（push で Pages の公開も自動で動く。2026-11-09 確認）
 
 concurrency:
   group: broadcasts
@@ -45,8 +44,6 @@ jobs:
           python tools/broadcasts/build.py $args
 
       - name: 変わっていれば公開する
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet -- data/broadcasts.js && [ -z "$(git ls-files --others -- data/broadcasts.js)" ]; then
             echo "変化なし"
@@ -57,5 +54,3 @@ jobs:
           git add data/broadcasts.js
           git commit -m "放映予定を更新（自動）"
           git push
-          # Actions からの push で Pages が動かない場合の保険
-          gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null || echo "Pages の再構築依頼は失敗（push で動いていれば問題なし）"
