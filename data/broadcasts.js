@@ -1,7 +1,7 @@
 // 放映予定（自動で作成：tools/broadcasts/build.py）。手で書き換えない
 // 手で足したい試合は tools/broadcasts/manual.json に書く
 const BROADCASTS = {
-  "generated": "2026-11-09T10:27+09:00",
+  "generated": "2026-11-09T10:28+09:00",
   "items": [
     {
       "date": "2026-11-14",
