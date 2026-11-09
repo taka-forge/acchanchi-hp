@@ -1,162 +1,264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>観戦居酒屋あっちゃん家｜千葉県茂原市のスポーツ観戦居酒屋</title>
-  <meta name="description" content="千葉県茂原市・新茂原駅徒歩6分のスポーツ観戦居酒屋「あっちゃん家」。モニター5台（DAZN・WOWOW）でスポーツ観戦をしながら、炭火焼き鳥とお酒を楽しめるアットホームなお店。駐車場完備・20名以上で貸切OK・パブリックビューイングも開催！">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  <link rel="canonical" href="https://acchanchi.com/">
-  <!-- OGP（LINE・X等でURL共有時のカード表示）。ドメイン変更時はこことdata/site-data.jsのstructured.urlを差し替える -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="観戦居酒屋あっちゃん家｜千葉県茂原市のスポーツ観戦居酒屋">
-  <meta property="og:description" content="モニター5台でスポーツ観戦しながら炭火焼き鳥とお酒！新茂原駅徒歩6分・駐車場完備・貸切OK。">
-  <meta property="og:url" content="https://acchanchi.com/">
-  <meta property="og:image" content="https://acchanchi.com/images/og-image.jpg">
-  <meta property="og:locale" content="ja_JP">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>観戦居酒屋あっちゃん家｜千葉県茂原市のスポーツ観戦居酒屋</title>
+<meta name="description" content="千葉県茂原市・新茂原駅から徒歩6分のスポーツ観戦居酒屋「あっちゃん家」。モニター5台（DAZN・WOWOW）で試合を見ながら、炭火焼き鳥とお酒を。加熱式たばこOK、カード・電子マネー・QR決済OK、駐車場15〜20台。ご予約はお電話かホットペッパーで。">
+<meta name="theme-color" content="#0b0d14">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="canonical" href="https://acchanchi.com/">
+<!-- OGP（LINE・X等でURL共有時のカード表示）。ドメイン変更時はこことdata/site-data.jsのstructured.urlを差し替える -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="観戦居酒屋あっちゃん家">
+<meta property="og:title" content="観戦居酒屋あっちゃん家｜千葉県茂原市のスポーツ観戦居酒屋">
+<meta property="og:description" content="モニター5台で試合を見ながら、炭火焼き鳥とお酒。新茂原駅から徒歩6分・駐車場あり・加熱式たばこOK。">
+<meta property="og:url" content="https://acchanchi.com/">
+<meta property="og:image" content="https://acchanchi.com/images/og-image.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="images/exterior-night.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="stage" aria-hidden="true">
+  <img class="scene is-sharp is-on" data-scene="night" src="images/exterior-night.jpg" alt="">
+  <img class="scene" data-scene="board" data-src="images/interior-blackboard.jpg" alt="">
+  <img class="scene" data-scene="counter" data-src="images/interior-counter.jpg" alt="">
+  <img class="scene" data-scene="sumibi" data-src="images/yakitori-sumibi.jpg" alt="">
+  <img class="scene" data-scene="zashiki" data-src="images/interior-zashiki.jpg" alt="">
+  <img class="scene" data-scene="sign" data-src="images/exterior-sign.jpg" alt="">
+</div>
 
-  <!-- ヘッダー -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="#top" class="header-logo">
-        <span class="logo-mark">🍺⚽</span>
-        <span class="logo-text">観戦居酒屋あっちゃん家</span>
-      </a>
-      <nav class="nav" id="nav">
-        <a href="#about">お店について</a>
-        <a href="#menu">メニュー</a>
-        <a href="#news">お知らせ</a>
-        <a href="#info">店舗情報</a>
-        <a href="#reserve" class="nav-reserve">ご予約</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+<div class="page">
+<noscript><p class="noscript">このページはJavaScriptを使って表示しています。ご予約・お問い合わせはお電話（0475-47-3914）でどうぞ。</p></noscript>
 
-  <!-- ヒーロー -->
-  <section class="hero" id="top">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-content">
-      <p class="hero-badge">🎉 祝オープン OPEN ✨</p>
-      <h1 class="hero-title">
-        <span class="hero-title-sub">スポーツ観戦 × 居酒屋</span>
-        <span class="hero-title-main">あっちゃん家</span>
-      </h1>
-      <p class="hero-catch" id="heroCatch">スポーツ観戦しながら、うまい酒とメシ。</p>
-      <div class="hero-buttons">
-        <a href="#reserve" class="btn btn-primary">ご予約はこちら</a>
-        <a href="#" class="btn btn-outline" id="heroInsta" target="_blank" rel="noopener">Instagramを見る</a>
+<header class="site-head" data-head>
+  <div class="wrap head-in">
+    <a class="brand" href="#top"><img src="images/favicon.svg" alt="" width="28" height="28">あっちゃん家</a>
+    <p class="head-state" data-today><span class="lamp" aria-hidden="true"></span><span data-today-short></span></p>
+    <nav class="site-nav" aria-label="ページ内の移動">
+      <a href="#tv">放映予定</a><a href="#watch">観戦</a><a href="#menu">メニュー</a><a href="#access">営業時間・地図</a><a href="#reserve">ご予約</a>
+    </nav>
+    <a class="head-tel" data-tel-link href="#"><span>ご予約・お問い合わせ</span><strong data-shop="tel"></strong></a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" id="top" data-scene-key="night">
+    <h1 class="hero-name"><span class="hero-pre">観戦居酒屋</span><span class="hero-main">あっちゃん家</span></h1>
+    <div class="hero-foot" data-today>
+      <p class="hero-lead" data-shop="catchphrase"></p>
+      <ul class="points" data-highlights aria-label="お店のポイント"></ul>
+      <div class="hero-today">
+        <p class="hero-now"><span class="lamp" aria-hidden="true"></span><span data-today-label></span><b data-today-text></b><a class="hero-hours" href="#hours">週の営業時間</a></p>
+        <p class="hero-sub" data-today-sub></p>
+        <p class="hero-next" data-tv-next hidden></p>
       </div>
-    </div>
-    <div class="hero-scroll">SCROLL ▼</div>
-  </section>
-
-  <!-- お店について -->
-  <section class="section about" id="about">
-    <div class="container">
-      <h2 class="section-title"><span class="section-en">ABOUT</span>お店について</h2>
-      <p class="about-lead">
-        観戦居酒屋あっちゃん家は、<br class="pc-only">
-        <strong>スポーツ観戦をしながらお酒とお食事を楽しめる</strong>、<br class="pc-only">
-        千葉県茂原市のアットホームな居酒屋です。
-      </p>
-      <div class="feature-grid" id="featureGrid"></div>
-    </div>
-  </section>
-
-  <!-- 写真ギャラリー -->
-  <section class="section gallery" id="gallery">
-    <div class="container">
-      <h2 class="section-title"><span class="section-en">GALLERY</span>お店の様子</h2>
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </div>
-  </section>
-
-  <!-- メニュー -->
-  <section class="section menu" id="menu">
-    <div class="container">
-      <h2 class="section-title"><span class="section-en">MENU</span>メニュー</h2>
-      <div class="menu-grid" id="menuGrid"></div>
-      <p class="menu-note">※価格はすべて税込みです。仕入れ状況によりメニュー・価格が変わる場合があります。</p>
-
-      <div class="menu-images" id="menuImages" hidden>
-        <h3 class="menu-images-title">店内メニュー表</h3>
-        <p class="menu-images-note">タップすると大きく表示されます</p>
-        <div class="menu-images-grid" id="menuImagesGrid"></div>
+      <div class="btns hero-cta">
+        <button class="btn btn-main" type="button" data-reserve-open><span data-icon="phone"></span>ご予約</button>
+        <a class="btn" href="#tv"><span data-icon="tv"></span>放映予定を見る</a>
       </div>
     </div>
   </section>
 
-  <!-- お知らせ・イベント -->
-  <section class="section news" id="news">
-    <div class="container">
-      <h2 class="section-title"><span class="section-en">NEWS</span>お知らせ・イベント</h2>
-      <ul class="news-list" id="newsList"></ul>
-      <div class="insta-block">
-        <p class="insta-lead">試合スケジュール・イベント情報はInstagramで<br class="sp-only">発信中！</p>
-        <div class="insta-embeds" id="instaEmbeds"></div>
-        <a href="#" class="btn btn-insta" id="instaBtn" target="_blank" rel="noopener">
-          📷 Instagramをフォローする
-        </a>
+
+  <section id="tv" data-scene-key="board" aria-labelledby="tvH">
+    <div class="wrap sec">
+      <p class="tate">放映予定</p>
+      <div class="sec-body">
+        <!-- 予定があるとき -->
+        <h2 class="big" id="tvH" data-tv-has>これから、<wbr>店で<wbr>流す試合</h2>
+        <p class="lead" data-tv-has>モニターごとに別の試合を流せます。見たい試合は、ご予約のときにお知らせください。</p>
+        <ul class="tv" data-tv="open" data-tv-has></ul>
+        <!-- 営業時間外（定休日・昼・深夜）の大一番 -->
+        <div class="tv-reserve" data-tv-reserve hidden>
+          <h3 class="sub-h">営業時間外の大一番は、<wbr>予約制で<wbr>開けます</h3>
+          <p class="note" data-match-reserve-note></p>
+          <ul class="tv" data-tv="reserve"></ul>
+          <div class="btns"><button class="btn btn-main" type="button" data-match-reserve-open><span data-icon="phone"></span>予約する</button></div>
+        </div>
+        <!-- 予定が入っていないとき -->
+        <h2 class="big" data-tv-none>DAZNと<wbr>WOWOWで、<wbr>サッカーも<wbr>野球も。</h2>
+        <p class="lead" data-tv-none>流す試合は、Instagramでお知らせしています。見たい試合があれば、お電話で聞いてみてください。</p>
+        <p class="more">最新の告知はInstagramで　<a data-insta-link href="#"><span data-shop="instagramId"></span><span data-icon="out"></span></a></p>
       </div>
     </div>
   </section>
 
-  <!-- 店舗情報 -->
-  <section class="section info" id="info">
-    <div class="container">
-      <h2 class="section-title"><span class="section-en">INFO</span>店舗情報</h2>
-      <div class="info-grid">
-        <table class="info-table" id="infoTable"></table>
-        <div class="info-map">
-          <iframe
-            id="mapFrame"
-            src=""
-            width="100%" height="300" style="border:0;"
-            allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="あっちゃん家の地図"></iframe>
-          <a href="#" class="map-link" id="mapLink" target="_blank" rel="noopener">📍 Googleマップで開く</a>
+  <section id="watch" data-scene-key="counter" aria-labelledby="watchH">
+    <div class="wrap sec">
+      <p class="ghost" aria-hidden="true">観</p>
+      <p class="tate">観戦</p>
+      <div class="sec-body">
+        <h2 class="big" id="watchH">モニター5台。<br>ゴールの瞬間は、<wbr>みんなで<wbr>ハイタッチ。</h2>
+        <p class="lead" data-feature-lead="monitor"></p>
+        <ul class="feats" data-features></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="smoke" class="smoke" data-scene-key="counter" aria-labelledby="smokeH" data-smoke>
+    <div class="wrap sec">
+      <p class="ghost" aria-hidden="true">煙</p>
+      <p class="tate">たばこ</p>
+      <div class="sec-body">
+        <h2 class="big" id="smokeH">
+          <svg class="wisp" viewBox="0 0 38 70" aria-hidden="true"><path d="M8 68c0-10 10-12 8-24S6 30 12 18 22 8 20 2"/><path d="M20 68c0-9 9-13 6-23s-8-14-3-24 9-11 7-19"/></svg>
+          <span data-smoking="title"></span>
+        </h2>
+        <p class="lead" data-smoking="text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" data-scene-key="sumibi" aria-labelledby="menuH">
+    <div class="wrap sec">
+      <p class="ghost" aria-hidden="true">炭</p>
+      <p class="tate">炭火焼き鳥</p>
+      <div class="sec-body">
+        <h2 class="big" id="menuH">炭火で焼く、<br>一本<span class="num" data-kushi-price></span>円。</h2>
+        <ul class="picks" data-picks></ul>
+        <div class="menu-grid">
+          <div class="sec-body">
+            <ul class="kushi-list" data-kushi aria-label="串焼きの種類"></ul>
+            <p class="kushi-note" data-kushi-note></p>
+            <p class="m-item kushi-mori" data-kushi-mori></p>
+          </div>
+          <div class="osusume">
+            <h3>おすすめ</h3>
+            <ul class="m-list" data-menu-cat="おすすめ"></ul>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="btn" type="button" data-menu-open><span data-icon="menu"></span><span>メニューをぜんぶ見る（<span data-menu-count></span>品）</span></button>
+          <button class="btn" type="button" data-menu-images>店内のメニュー表を見る</button>
+        </div>
+        <p class="note">※価格はすべて税込みです。仕入れ状況によりメニュー・価格が変わる場合があります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos" data-scene-key="zashiki" aria-labelledby="photosH">
+    <div class="wrap sec">
+      <p class="tate">お席</p>
+      <div class="sec-body" data-gal-wrap>
+        <div class="gal-head">
+          <h2 class="big" id="photosH">カウンター、<wbr>テーブル、<wbr>座敷。</h2>
+          <div class="gal-nav">
+            <button type="button" data-gal-step="-1" aria-label="前の写真"><span data-icon="prev"></span></button>
+            <button type="button" data-gal-step="1" aria-label="次の写真"><span data-icon="next"></span></button>
+          </div>
+        </div>
+        <p class="lead" data-facility="席数"></p>
+        <ul class="gal" data-gallery></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" data-scene-key="zashiki" aria-labelledby="newsH">
+    <div class="wrap sec is-tight">
+      <p class="tate">お知らせ</p>
+      <div class="sec-body">
+        <h2 class="vh" id="newsH">お知らせ</h2>
+        <ul class="news" data-news></ul>
+        <div class="insta" data-insta-posts hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="access" data-scene-key="sign" aria-labelledby="accessH">
+    <div class="wrap sec">
+      <p class="tate">お店の情報</p>
+      <div class="sec-body">
+        <div class="access" data-copy-scope>
+          <div class="access-where">
+            <h2 class="big" id="accessH">新茂原駅から、<br>歩いて6分。</h2>
+            <p class="addr" data-shop="address"></p>
+            <p class="lead" data-shop="access"></p>
+            <div class="btns">
+              <a class="btn" data-map-link href="#"><span data-icon="pin"></span>Googleマップで開く</a>
+              <button class="btn" type="button" data-copy="address"><span data-icon="copy"></span>住所をコピー</button>
+            </div>
+            <figure class="parking">
+              <img src="images/parking.jpg" alt="駐車場の看板「車はここに停めてね」" loading="lazy" width="112" height="149">
+              <figcaption>
+                <p class="quote">「車はここに<wbr>停めてね」</p>
+                <p class="lead">駐車場 <span data-facility="駐車場"></span><br>飲む方は、運転代行か<wbr>ハンドルキーパーで。</p>
+              </figcaption>
+            </figure>
+          </div>
+          <figure class="map"><iframe data-map-frame title="あっちゃん家の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></figure>
+        </div>
+        <!-- 営業時間（きょうの行に印）と、来店前に知りたいこと -->
+        <div class="shop-info">
+          <div class="hours" id="hours" data-today>
+            <h3 class="sub-h">営業時間</h3>
+            <ul class="week" data-week aria-label="曜日ごとの営業時間"></ul>
+            <p class="note" data-hours-row="試合開催日" data-flat></p>
+          </div>
+          <div>
+            <h3 class="sub-h">はじめての方へ</h3>
+            <dl class="info">
+              <div><dt>おひとり</dt><dd data-feature-text="welcome"></dd></div>
+              <div><dt>たばこ</dt><dd data-smoking="short"></dd></div>
+              <div><dt>お支払い</dt><dd data-payment></dd></div>
+            </dl>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 予約 -->
-  <section class="section reserve" id="reserve">
-    <div class="container">
-      <h2 class="section-title reserve-title"><span class="section-en">RESERVE</span>ご予約</h2>
-      <p class="reserve-lead">ご予約・お問い合わせはお電話にてお気軽にどうぞ！</p>
-      <a href="tel:0475-47-3914" class="reserve-tel" id="reserveTel">📞 0475-47-3914</a>
-      <p class="reserve-note">「ホームページを見た」とお伝えいただけるとスムーズです</p>
+  <section id="reserve" data-scene-key="night" aria-labelledby="reserveH">
+    <div class="wrap sec">
+      <p class="tate">ご予約</p>
+      <div class="sec-body">
+        <h2 class="big" id="reserveH" data-reserve-head></h2>
+        <div class="ways">
+          <div class="way" data-copy-scope>
+            <p class="way-label">お電話で</p>
+            <p class="call-big"><a data-tel-link href="#"><span data-shop="tel"></span></a></p>
+            <p class="note" data-reserve="telNote"></p>
+            <div class="btns"><button class="btn" type="button" data-copy="tel"><span data-icon="copy"></span>番号をコピー</button></div>
+          </div>
+          <div class="way" data-net-only>
+            <p class="way-label">ネットで</p>
+            <p class="net-big"><span class="nw" data-reserve="netName"></span><wbr><span class="nw">から</span></p>
+            <p class="note" data-reserve="netNote"></p>
+            <div class="btns"><a class="btn btn-main" data-net-link href="#">空席を見て予約する<span data-icon="out"></span></a></div>
+          </div>
+        </div>
+        <p class="lead"><span data-facility="貸切"></span>。パブリックビューイングのご相談もどうぞ。</p>
+      </div>
     </div>
   </section>
+</main>
 
-  <!-- フッター -->
-  <footer class="footer">
-    <p class="footer-logo">観戦居酒屋あっちゃん家 <span class="footer-roman">ACCHANCHI</span></p>
-    <p class="footer-copy">&copy; <span id="year"></span> 観戦居酒屋あっちゃん家</p>
-  </footer>
-
-  <!-- スマホ用固定予約バー -->
-  <a href="tel:0475-47-3914" class="fixed-tel" id="fixedTel">📞 電話で予約する</a>
-
-  <script src="data/site-data.js"></script>
-  <!-- メニュー画像の拡大表示 -->
-  <div class="lightbox" id="lightbox" hidden>
-    <button class="lightbox-close" id="lightboxClose" aria-label="閉じる">×</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="foot-name">観戦居酒屋あっちゃん家</p>
+    <p data-shop="address"></p>
+    <p><a data-tel-link href="#"><span data-shop="tel"></span></a></p>
+    <p><a data-insta-link href="#">Instagram <span data-shop="instagramId"></span></a></p>
+    <p>© <span data-year></span> 観戦居酒屋あっちゃん家</p>
   </div>
+</footer>
+<div class="dock-spacer"></div>
+</div>
 
-  <script src="js/main.js"></script>
+<nav class="dock" aria-label="すぐに使うボタン">
+  <button type="button" class="dock-btn is-main" data-reserve-open><span data-icon="phone"></span>予約</button>
+  <a class="dock-btn" href="#tv"><span data-icon="tv"></span>放映予定</a>
+  <button type="button" class="dock-btn" data-menu-open><span data-icon="menu"></span>メニュー</button>
+  <a class="dock-btn" data-map-link href="#"><span data-icon="pin"></span>地図</a>
+</nav>
+
+<script src="data/site-data.js"></script>
+<script src="data/broadcasts.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
