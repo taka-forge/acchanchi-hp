@@ -1,20 +1,8 @@
 // 放映予定（自動で作成：tools/broadcasts/build.py）。手で書き換えない
 // 手で足したい試合は tools/broadcasts/manual.json に書く
 const BROADCASTS = {
-  "generated": "2026-11-16T10:07+09:00",
+  "generated": "2026-11-18T11:57+09:00",
   "items": [
-    {
-      "date": "2026-11-17",
-      "time": null,
-      "sport": "サッカー",
-      "league": "日本代表 親善試合",
-      "match": "日本 vs パラグアイ",
-      "tags": [
-        "地上波（日本テレビ）"
-      ],
-      "mode": "open",
-      "note": "時刻は決まりしだい"
-    },
     {
       "date": "2026-11-20",
       "time": "19:00",
@@ -60,6 +48,18 @@ const BROADCASTS = {
       "match": "スコットランド vs 日本",
       "tags": [
         "WOWOW"
+      ],
+      "mode": "open",
+      "note": ""
+    },
+    {
+      "date": "2026-11-24",
+      "time": "16:45",
+      "sport": "サッカー",
+      "league": "ACLエリート 第5節",
+      "match": "ニューカッスル・ジェッツ vs 柏レイソル",
+      "tags": [
+        "DAZN"
       ],
       "mode": "open",
       "note": ""
