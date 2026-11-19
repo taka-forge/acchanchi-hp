@@ -1,7 +1,7 @@
 // 放映予定（自動で作成：tools/broadcasts/build.py）。手で書き換えない
 // 手で足したい試合は tools/broadcasts/manual.json に書く
 const BROADCASTS = {
-  "generated": "2026-11-18T11:57+09:00",
+  "generated": "2026-11-19T11:39+09:00",
   "items": [
     {
       "date": "2026-11-20",
@@ -62,6 +62,18 @@ const BROADCASTS = {
         "DAZN"
       ],
       "mode": "open",
+      "note": ""
+    },
+    {
+      "date": "2026-11-25",
+      "time": "19:00",
+      "sport": "サッカー",
+      "league": "J1 第16節",
+      "match": "ジェフ千葉 vs 名古屋",
+      "tags": [
+        "DAZN"
+      ],
+      "mode": "reserve",
       "note": ""
     }
   ]
