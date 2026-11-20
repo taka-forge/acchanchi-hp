@@ -1,7 +1,7 @@
 // 放映予定（自動で作成：tools/broadcasts/build.py）。手で書き換えない
 // 手で足したい試合は tools/broadcasts/manual.json に書く
 const BROADCASTS = {
-  "generated": "2026-11-19T11:39+09:00",
+  "generated": "2026-11-20T11:24+09:00",
   "items": [
     {
       "date": "2026-11-20",
@@ -75,6 +75,18 @@ const BROADCASTS = {
       ],
       "mode": "reserve",
       "note": ""
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:15",
+      "sport": "サッカー",
+      "league": "ACL2 第5節",
+      "match": "スヴァイリエン vs 町田",
+      "tags": [
+        "DAZN"
+      ],
+      "mode": "open",
+      "note": "22:00の閉店まで"
     }
   ]
 };
