@@ -1,20 +1,8 @@
 // 放映予定（自動で作成：tools/broadcasts/build.py）。手で書き換えない
 // 手で足したい試合は tools/broadcasts/manual.json に書く
 const BROADCASTS = {
-  "generated": "2026-11-23T10:48+09:00",
+  "generated": "2026-11-25T13:18+09:00",
   "items": [
-    {
-      "date": "2026-11-24",
-      "time": "16:45",
-      "sport": "サッカー",
-      "league": "ACLエリート 第5節",
-      "match": "ニューカッスル・ジェッツ vs 柏レイソル",
-      "tags": [
-        "DAZN"
-      ],
-      "mode": "open",
-      "note": ""
-    },
     {
       "date": "2026-11-25",
       "time": "19:00",
@@ -74,6 +62,18 @@ const BROADCASTS = {
       ],
       "mode": "open",
       "note": "17:00の開店から"
+    },
+    {
+      "date": "2026-12-01",
+      "time": "19:00",
+      "sport": "サッカー",
+      "league": "ACLエリート 第6節",
+      "match": "柏レイソル vs コンアン・ハノイ",
+      "tags": [
+        "DAZN"
+      ],
+      "mode": "open",
+      "note": ""
     }
   ]
 };
